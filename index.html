@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./CSS/estilo.css">
+</head>
+<body>
+<!--Menu-->
+    <header>
+        <nav class="nav">
+            <div class="container-fluid"></div>
+                <a class="nav-link active" href="index.html"><img src="./imagem/logo.jpg" alt="logo da zallpy digital" height="60px"></a>
+        </nav>
+    </header>
+<!--Formulário-->
+    <section class="cadastro container-fluid">
+        <div class="container">
+            <form  class="needs-validation" novalidate>
+                <h1 class="text-center text-uppercase display-5">Cadastro</h1>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="nome">Nome</label>
+                        <input type="text" class="form-control border-top 0 border-left 0 border-right 0" id="nome" required placeholder="Digite seu nome completo">
+                        <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="email">E-mail</label>
+                        <input type="email" class="form-control border-top 0 border-left 0 border-right 0" id="email"required placeholder="layla@example.com">
+                        <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="data">Data de Nascimento</label>
+                        <input type="text" class="form-control border-top 0 border-left 0 border-right 0" id="data" required placeholder="DD/MM/AAAA">
+                        <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="cpf">CPF</label>
+                        <input type="text" class="form-control border-top 0 border-left 0 border-right 0" id="cpf" required placeholder="Digite somente números">
+                        <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="phone">Celular</label>
+                        <input type="phone" class="form-control border-top 0 border-left 0 border-right 0" id="phone" required placeholder="(xx)xxxxxxxxx">
+                        <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="cep">CEP</label>
+                        <input type="text" class="form-control border-top 0 border-left 0 border-right 0" id="cep" required placeholder="Digite somente números">
+                        <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                      </div>
+                </div>
+                <div class="form-group">
+                    <label for="endereco">Logradouro</label>
+                    <input type="text" class="form-control border-top 0 border-left 0 border-right 0" id="endereco" required placeholder="Rua, Avenida, etc.">
+                    <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="numero">Número</label>
+                        <input type="text" class="form-control border-top 0 border-left 0 border-right 0" id="numero" required placeholder="Digite somente números">
+                        <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="complemento">Complemento</label>
+                        <input type="text" class="form-control border-top 0 border-left 0 border-right 0" id="complemento" required placeholder="Apartamento, bloco, casa, etc.">
+                        <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" class="form-control border-top 0 border-left 0 border-right 0" id="bairro" required placeholder="Digite seu bairro">
+                        <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" class="form-control border-top 0 border-left 0 border-right 0" id="cidade" required placeholder="Digite sua cidade">
+                        <div class="invalid-feedback">Por favor, preencha este campo.</div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="estado">Estado</label>
+                        <input id="estado" required class="form-control border-top 0 border-left 0 border-right 0" placeholder="Digite seu estado">
+                        <div class="invalid-feedback">Por favor, preencha este campo.</div>   
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Descrição (Bio)</label>
+                    <textarea class="form-control" id="mensagem" rows="3" placeholder="Digite sua Mensagem"></textarea>
+                </div>
+                <button type="button" class="btn btn-primary" id="send" onclick="enviar()">Enviar</button>
+            </form>
+        </div>
+    </section>
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="./JS/funcao.js"></script>
+</body>
+<!--Rodapé-->
+<footer>
+    <section class="conteudo container-fluid">
+       <div class="container">
+           <div class="row">
+            <div class="col-md-6 text-center mt-3 mb-3">
+                <h2> &copy;2022 por Layla Freire</h2>
+            </div>
+            <div class="col-md-6 text-center mt-3 mb-3">
+                <a class="ln" href="https://www.linkedin.com/in/layla-freire"><img src="./imagem/linkedin (2).png" alt="logo do linkedin" height="54px"></a>
+                <a class="git" href="HTTPS://GITHUB.COM/LAYLA-FREIRE"><img src="./imagem/github (1).png" alt="logo do github" height="54px"></a>
+            </div>
+           </div>
+       </div>       
+    </section>
+</footer>
+</html>
